@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Calculator</title>
+</head>
+<body>
+    <h1>Enter an Expression to Integrate</h1>
+    <form method="POST">
+        <label for="expression">Expression (in terms of x):</label>
+        <input type="text" id="expression" name="expression" required>
+        <button type="submit">Submit</button>
+    </form>
 
+    {% if result is not none %}
+        <h2>Result:</h2>
+        <p>The integral is: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
