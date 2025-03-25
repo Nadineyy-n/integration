@@ -1,4 +1,4 @@
-
+import os
 import sympy as sp
 from flask import Flask, render_template, request
 
@@ -22,4 +22,5 @@ def run():
     return render_template('results.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
